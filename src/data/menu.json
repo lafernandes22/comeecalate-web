@@ -1,0 +1,37 @@
+{
+  "categories": [
+    {
+      "name": "Entradas",
+      "items": [
+        { "name": "Coxinha de Frango", "description": "Massa crocante recheada com frango desfiado temperado.", "price": "R$ 8" },
+        { "name": "Bolinho de Bacalhau", "description": "Tradicional bolinho de bacalhau frito na hora.", "price": "R$ 10" },
+        { "name": "Pão de Alho", "description": "Pão artesanal com manteiga de alho e ervas.", "price": "R$ 12" }
+      ]
+    },
+    {
+      "name": "Pratos Principais",
+      "items": [
+        { "name": "Frango Grelhado", "description": "Filé de frango grelhado com legumes salteados e arroz.", "price": "R$ 38" },
+        { "name": "Picanha na Brasa", "description": "Picanha grelhada ao ponto, acompanha farofa e vinagrete.", "price": "R$ 65" },
+        { "name": "Peixe do Dia", "description": "Peixe fresco preparado na hora, consulte o garçom.", "price": "R$ 52" },
+        { "name": "Macarrão ao Sugo", "description": "Massa artesanal com molho de tomate fresco e manjericão.", "price": "R$ 34" }
+      ]
+    },
+    {
+      "name": "Sobremesas",
+      "items": [
+        { "name": "Pudim de Leite", "description": "Pudim cremoso de leite condensado com calda de caramelo.", "price": "R$ 16" },
+        { "name": "Brigadeiro Gourmet", "description": "Trio de brigadeiros com coberturas especiais.", "price": "R$ 14" },
+        { "name": "Sorvete Artesanal", "description": "Duas bolas de sorvete artesanal, sabores do dia.", "price": "R$ 18" }
+      ]
+    },
+    {
+      "name": "Bebidas",
+      "items": [
+        { "name": "Suco Natural", "description": "Laranja, limão, abacaxi ou maracujá.", "price": "R$ 12" },
+        { "name": "Limonada Suíça", "description": "Limonada cremosa com leite condensado.", "price": "R$ 16" },
+        { "name": "Refrigerante", "description": "Lata 350ml — Coca-Cola, Guaraná ou Água Tônica.", "price": "R$ 8" }
+      ]
+    }
+  ]
+}

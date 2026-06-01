@@ -1,0 +1,50 @@
+---
+import info from '../data/info.json';
+const { restaurant, hours } = info;
+const { address, phone, email, mapsEmbed } = restaurant;
+---
+
+<section id="location">
+  <div class="container">
+    <h2 class="section-title">Horários & Localização</h2>
+    <hr class="section-divider" />
+    <p class="section-subtitle">Venha nos visitar — reservas sempre bem-vindas.</p>
+
+    <div class="location-grid">
+      <div>
+        <table class="hours-table">
+          <tbody>
+            {hours.map((slot) => (
+              <tr>
+                <td>{slot.days} — {slot.label}</td>
+                <td>
+                  {slot.open ? `${slot.open} – ${slot.close}` : 'Fechado'}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        <div class="contact-info">
+          <div>
+            <strong>Endereço:</strong><br />
+            {address.street}, {address.neighborhood}<br />
+            {address.city} – {address.state}, {address.zip}
+          </div>
+          <div><strong>Telefone:</strong> {phone}</div>
+          <div><strong>E-mail:</strong> <a href={`mailto:${email}`}>{email}</a></div>
+        </div>
+      </div>
+
+      <div class="map-embed">
+        <iframe
+          src={mapsEmbed}
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Localização no Google Maps"
+        />
+      </div>
+    </div>
+  </div>
+</section>

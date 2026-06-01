@@ -1,0 +1,30 @@
+---
+import menuData from '../data/menu.json';
+---
+
+<section id="menu">
+  <div class="container">
+    <h2 class="section-title">Cardápio</h2>
+    <hr class="section-divider" />
+    <p class="section-subtitle">Pratos preparados com ingredientes frescos, todos os dias.</p>
+
+    <div class="menu-categories">
+      {menuData.categories.map((category) => (
+        <div class="menu-category">
+          <h3>{category.name}</h3>
+          <div class="menu-items">
+            {category.items.map((item) => (
+              <div class="menu-item">
+                <div class="menu-item-header">
+                  <span class="menu-item-name">{item.name}</span>
+                  <span class="menu-item-price">{item.price}</span>
+                </div>
+                <p class="menu-item-desc">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

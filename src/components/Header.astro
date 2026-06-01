@@ -1,0 +1,33 @@
+---
+import info from '../data/info.json';
+const { name } = info.restaurant;
+---
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo" aria-hidden="true" tabindex="-1">
+      <img src="/logo.svg" alt={name} class="nav-logo-img" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#menu">Cardápio</a></li>
+      <li><a href="#about">Sobre</a></li>
+      <li><a href="#gallery">Galeria</a></li>
+      <li><a href="#location">Localização</a></li>
+    </ul>
+    <div class="nav-spacer"></div>
+  </div>
+</nav>
+
+<script>
+  const nav = document.querySelector('.site-nav');
+  const logo = document.querySelector('.nav-logo');
+
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY > 80;
+    nav?.classList.toggle('scrolled', scrolled);
+    if (logo) {
+      (logo as HTMLElement).removeAttribute('aria-hidden');
+      (logo as HTMLElement).removeAttribute('tabindex');
+    }
+  }, { passive: true });
+</script>

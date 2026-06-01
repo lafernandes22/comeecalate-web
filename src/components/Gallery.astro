@@ -1,0 +1,26 @@
+---
+// Drop real photos into public/images/ and replace the placeholders below.
+const photos = [
+  { src: '/images/gallery-1.jpg', alt: 'Prato principal da casa' },
+  { src: '/images/gallery-2.jpg', alt: 'Ambiente do restaurante' },
+  { src: '/images/gallery-3.jpg', alt: 'Sobremesas artesanais' },
+  { src: '/images/gallery-4.jpg', alt: 'Mesa posta' },
+  { src: '/images/gallery-5.jpg', alt: 'Bar e drinks' },
+];
+---
+
+<section id="gallery">
+  <div class="container">
+    <h2 class="section-title">Galeria</h2>
+    <hr class="section-divider" />
+    <p class="section-subtitle">Um gostinho do que espera por você.</p>
+
+    <div class="gallery-grid">
+      {photos.map((photo) => (
+        <div class="gallery-item">
+          <div class="gallery-placeholder">📸</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
