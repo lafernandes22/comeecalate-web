@@ -29,9 +29,9 @@ const { name, tagline } = info.restaurant;
     <Header />
 
     <section id="hero" class="hero">
-      <div class="hero-bg"></div>
+      <div class="hero-bg" style={`background-image: url('${import.meta.env.BASE_URL}tiles.svg')`}></div>
       <div class="hero-content">
-        <img src="/logo.svg" alt={name} class="hero-logo" />
+        <img src={`${import.meta.env.BASE_URL}logo.svg`} alt={name} class="hero-logo" />
         <a href="#menu" class="btn">Ver Cardápio</a>
       </div>
     </section>

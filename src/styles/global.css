@@ -150,7 +150,6 @@ section:nth-child(even) {
 .hero-bg {
   position: absolute;
   inset: -100px;
-  background-image: url('/tiles.svg');
   background-size: auto;
   background-repeat: repeat;
   background-position: center;
