@@ -1,0 +1,22 @@
+name: Enforce staging source
+
+# Pull requests into main may only come from the staging branch of this repo.
+# Made a required status check ("check-source") by a repository ruleset.
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  check-source:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require head branch to be staging
+        env:
+          HEAD_REF: ${{ github.head_ref }}
+          HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
+          THIS_REPO: ${{ github.repository }}
+        run: |
+          if [ "$HEAD_REF" != "staging" ] || [ "$HEAD_REPO" != "$THIS_REPO" ]; then
+            echo "::error::Merges into main must come from the staging branch (got $HEAD_REPO:$HEAD_REF)."
+            exit 1
+          fi
