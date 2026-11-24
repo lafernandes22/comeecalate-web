@@ -1,8 +1,6 @@
 {
   "restaurant": {
     "name": "Come e Calate",
-    "tagline": "Sabor de verdade, sem pressa.",
-    "description": "Um cantinho aconchegante onde cada prato é preparado com ingredientes frescos e muito carinho. Venha nos visitar e descubra o prazer de uma boa refeição.",
     "phone": "(11) 99999-0000",
     "email": "contato@comeecalate.com",
     "address": {
@@ -19,10 +17,35 @@
     }
   },
   "hours": [
-    { "days": "Segunda a Sexta", "open": "11:30", "close": "15:00", "label": "Almoço" },
-    { "days": "Segunda a Sexta", "open": "19:00", "close": "23:00", "label": "Jantar" },
-    { "days": "Sábado e Domingo", "open": "12:00", "close": "16:00", "label": "Almoço" },
-    { "days": "Sábado", "open": "19:00", "close": "23:30", "label": "Jantar" },
-    { "days": "Domingo", "open": null, "close": null, "label": "Fechado à noite" }
+    {
+      "days": "weekdays",
+      "period": "lunch",
+      "open": "11:30",
+      "close": "15:00"
+    },
+    {
+      "days": "weekdays",
+      "period": "dinner",
+      "open": "19:00",
+      "close": "23:00"
+    },
+    {
+      "days": "weekends",
+      "period": "lunch",
+      "open": "12:00",
+      "close": "16:00"
+    },
+    {
+      "days": "saturday",
+      "period": "dinner",
+      "open": "19:00",
+      "close": "23:30"
+    },
+    {
+      "days": "sunday",
+      "period": "closedEvening",
+      "open": null,
+      "close": null
+    }
   ]
 }

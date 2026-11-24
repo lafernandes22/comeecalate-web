@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "htmlLang": "pt-BR",
+    "ogLocale": "pt_BR",
+    "label": "Português",
+    "short": "PT"
+  },
+  "tagline": "Sabor de verdade, sem pressa.",
+  "description": "Um cantinho aconchegante onde cada prato é preparado com ingredientes frescos e muito carinho. Venha nos visitar e descubra o prazer de uma boa refeição.",
+  "nav": {
+    "menu": "Cardápio",
+    "about": "Sobre",
+    "gallery": "Galeria",
+    "location": "Localização",
+    "language": "Idioma"
+  },
+  "hero": {
+    "cta": "Ver Cardápio"
+  },
+  "menu": {
+    "title": "Cardápio",
+    "subtitle": "Pratos preparados com ingredientes frescos, todos os dias."
+  },
+  "about": {
+    "title": "Nossa História",
+    "body": "Cada receita carrega memórias afetivas e técnicas aprimoradas ao longo dos anos. Aqui você não encontra pressa — só sabor, ambiente e boa conversa."
+  },
+  "gallery": {
+    "title": "Galeria",
+    "subtitle": "Um gostinho do que espera por você.",
+    "alts": [
+      "Prato principal da casa",
+      "Ambiente do restaurante",
+      "Sobremesas artesanais",
+      "Mesa posta",
+      "Bar e drinks"
+    ]
+  },
+  "location": {
+    "title": "Horários & Localização",
+    "subtitle": "Venha nos visitar — reservas sempre bem-vindas.",
+    "closed": "Fechado",
+    "address": "Endereço:",
+    "phone": "Telefone:",
+    "email": "E-mail:",
+    "mapTitle": "Localização no Google Maps"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados."
+  },
+  "days": {
+    "weekdays": "Segunda a Sexta",
+    "weekends": "Sábado e Domingo",
+    "saturday": "Sábado",
+    "sunday": "Domingo"
+  },
+  "periods": {
+    "lunch": "Almoço",
+    "dinner": "Jantar",
+    "closedEvening": "Fechado à noite"
+  },
+  "menuItems": {
+    "entradas": {
+      "name": "Entradas",
+      "items": {
+        "coxinha-de-frango": {
+          "name": "Coxinha de Frango",
+          "description": "Massa crocante recheada com frango desfiado temperado."
+        },
+        "bolinho-de-bacalhau": {
+          "name": "Bolinho de Bacalhau",
+          "description": "Tradicional bolinho de bacalhau frito na hora."
+        },
+        "pao-de-alho": {
+          "name": "Pão de Alho",
+          "description": "Pão artesanal com manteiga de alho e ervas."
+        }
+      }
+    },
+    "pratos-principais": {
+      "name": "Pratos Principais",
+      "items": {
+        "frango-grelhado": {
+          "name": "Frango Grelhado",
+          "description": "Filé de frango grelhado com legumes salteados e arroz."
+        },
+        "picanha-na-brasa": {
+          "name": "Picanha na Brasa",
+          "description": "Picanha grelhada ao ponto, acompanha farofa e vinagrete."
+        },
+        "peixe-do-dia": {
+          "name": "Peixe do Dia",
+          "description": "Peixe fresco preparado na hora, consulte o garçom."
+        },
+        "macarrao-ao-sugo": {
+          "name": "Macarrão ao Sugo",
+          "description": "Massa artesanal com molho de tomate fresco e manjericão."
+        }
+      }
+    },
+    "sobremesas": {
+      "name": "Sobremesas",
+      "items": {
+        "pudim-de-leite": {
+          "name": "Pudim de Leite",
+          "description": "Pudim cremoso de leite condensado com calda de caramelo."
+        },
+        "brigadeiro-gourmet": {
+          "name": "Brigadeiro Gourmet",
+          "description": "Trio de brigadeiros com coberturas especiais."
+        },
+        "sorvete-artesanal": {
+          "name": "Sorvete Artesanal",
+          "description": "Duas bolas de sorvete artesanal, sabores do dia."
+        }
+      }
+    },
+    "bebidas": {
+      "name": "Bebidas",
+      "items": {
+        "suco-natural": {
+          "name": "Suco Natural",
+          "description": "Laranja, limão, abacaxi ou maracujá."
+        },
+        "limonada-suica": {
+          "name": "Limonada Suíça",
+          "description": "Limonada cremosa com leite condensado."
+        },
+        "refrigerante": {
+          "name": "Refrigerante",
+          "description": "Lata 350ml — Coca-Cola, Guaraná ou Água Tônica."
+        }
+      }
+    }
+  }
+}

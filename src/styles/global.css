@@ -113,8 +113,28 @@ section:nth-child(even) {
   width: auto;
 }
 
-.nav-spacer {
-  /* mirrors the logo column width so links stay centered */
+.nav-lang {
+  /* sits in the right column, mirroring the logo so links stay centered */
+  justify-self: end;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.nav-lang a {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+  color: var(--color-text-muted);
+  transition: color 0.2s, background 0.2s;
+}
+
+.nav-lang a:hover { color: var(--color-accent); }
+
+.nav-lang a[aria-current='true'] {
+  color: var(--color-accent);
+  background: rgba(10, 99, 164, 0.1);
 }
 
 .nav-links {

@@ -1,0 +1,64 @@
+{
+  "meta": { "htmlLang": "en", "ogLocale": "en_US", "label": "English", "short": "EN" },
+  "tagline": "Real flavor, no rush.",
+  "description": "A cozy corner where every dish is made with fresh ingredients and lots of care. Come visit us and rediscover the pleasure of a good meal.",
+  "nav": { "menu": "Menu", "about": "About", "gallery": "Gallery", "location": "Location", "language": "Language" },
+  "hero": { "cta": "View Menu" },
+  "menu": { "title": "Menu", "subtitle": "Dishes made with fresh ingredients, every day." },
+  "about": {
+    "title": "Our Story",
+    "body": "Every recipe carries fond memories and techniques refined over the years. Here you won't find any rush — just flavor, atmosphere, and good conversation."
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "A little taste of what awaits you.",
+    "alts": ["House special main dish", "Restaurant atmosphere", "Handmade desserts", "A set table", "Bar and drinks"]
+  },
+  "location": {
+    "title": "Hours & Location",
+    "subtitle": "Come visit us — reservations always welcome.",
+    "closed": "Closed",
+    "address": "Address:",
+    "phone": "Phone:",
+    "email": "Email:",
+    "mapTitle": "Location on Google Maps"
+  },
+  "footer": { "rights": "All rights reserved." },
+  "days": { "weekdays": "Monday to Friday", "weekends": "Saturday and Sunday", "saturday": "Saturday", "sunday": "Sunday" },
+  "periods": { "lunch": "Lunch", "dinner": "Dinner", "closedEvening": "Closed in the evening" },
+  "menuItems": {
+    "entradas": {
+      "name": "Starters",
+      "items": {
+        "coxinha-de-frango": { "name": "Chicken Coxinha", "description": "Crispy dough filled with seasoned shredded chicken." },
+        "bolinho-de-bacalhau": { "name": "Salt Cod Fritters", "description": "Traditional salt cod fritters, fried to order." },
+        "pao-de-alho": { "name": "Garlic Bread", "description": "Artisan bread with garlic and herb butter." }
+      }
+    },
+    "pratos-principais": {
+      "name": "Main Courses",
+      "items": {
+        "frango-grelhado": { "name": "Grilled Chicken", "description": "Grilled chicken breast with sautéed vegetables and rice." },
+        "picanha-na-brasa": { "name": "Charcoal-Grilled Picanha", "description": "Picanha grilled to your liking, served with farofa and vinaigrette." },
+        "peixe-do-dia": { "name": "Catch of the Day", "description": "Fresh fish prepared to order — ask your server." },
+        "macarrao-ao-sugo": { "name": "Pasta al Sugo", "description": "Handmade pasta with fresh tomato sauce and basil." }
+      }
+    },
+    "sobremesas": {
+      "name": "Desserts",
+      "items": {
+        "pudim-de-leite": { "name": "Milk Pudding (Pudim de Leite)", "description": "Creamy condensed milk pudding with caramel sauce." },
+        "brigadeiro-gourmet": { "name": "Gourmet Brigadeiro", "description": "A trio of brigadeiros with special toppings." },
+        "sorvete-artesanal": { "name": "Artisan Ice Cream", "description": "Two scoops of handmade ice cream, flavors of the day." }
+      }
+    },
+    "bebidas": {
+      "name": "Drinks",
+      "items": {
+        "suco-natural": { "name": "Fresh Juice", "description": "Orange, lime, pineapple, or passion fruit." },
+        "limonada-suica": { "name": "Swiss Lemonade", "description": "Creamy limeade made with condensed milk." },
+        "refrigerante": { "name": "Soft Drink", "description": "350ml can — Coca-Cola, Guaraná, or Tonic Water." }
+      }
+    }
+  }
+}

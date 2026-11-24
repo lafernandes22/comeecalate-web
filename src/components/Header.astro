@@ -1,20 +1,40 @@
 ---
 import info from '../data/info.json';
+import { assetPath, getStrings, locales, pagePath, type Lang } from '../i18n';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = getStrings(lang);
 const { name } = info.restaurant;
 ---
 
 <nav class="site-nav">
   <div class="nav-inner">
     <a href="#hero" class="nav-logo" aria-hidden="true" tabindex="-1">
-      <img src={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/logo.svg`} alt={name} class="nav-logo-img" />
+      <img src={assetPath('/logo.svg')} alt={name} class="nav-logo-img" />
     </a>
     <ul class="nav-links">
-      <li><a href="#menu">Cardápio</a></li>
-      <li><a href="#about">Sobre</a></li>
-      <li><a href="#gallery">Galeria</a></li>
-      <li><a href="#location">Localização</a></li>
+      <li><a href="#menu">{t.nav.menu}</a></li>
+      <li><a href="#about">{t.nav.about}</a></li>
+      <li><a href="#gallery">{t.nav.gallery}</a></li>
+      <li><a href="#location">{t.nav.location}</a></li>
     </ul>
-    <div class="nav-spacer"></div>
+    <div class="nav-lang" role="group" aria-label={t.nav.language}>
+      {locales.map((code) => {
+        const label = getStrings(code).meta;
+        return (
+          <a
+            href={pagePath(code)}
+            hreflang={label.htmlLang}
+            lang={label.htmlLang}
+            title={label.label}
+            aria-current={code === lang ? 'true' : undefined}
+          >
+            {label.short}
+          </a>
+        );
+      })}
+    </div>
   </div>
 </nav>
 

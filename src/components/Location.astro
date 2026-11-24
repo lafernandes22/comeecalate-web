@@ -1,14 +1,23 @@
 ---
 import info from '../data/info.json';
+import { getStrings, type Lang } from '../i18n';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = getStrings(lang);
 const { restaurant, hours } = info;
 const { address, phone, email, mapsEmbed } = restaurant;
+const days = t.days as Record<string, string>;
+const periods = t.periods as Record<string, string>;
+// Ask Google Maps for the page language (the embed encodes it as !1s<lang>!2s<region>).
+const mapSrc = lang === 'en' ? mapsEmbed.replace('!1spt-BR!2sbr', '!1sen!2sus') : mapsEmbed;
 ---
 
 <section id="location">
   <div class="container">
-    <h2 class="section-title">Horários & Localização</h2>
+    <h2 class="section-title">{t.location.title}</h2>
     <hr class="section-divider" />
-    <p class="section-subtitle">Venha nos visitar — reservas sempre bem-vindas.</p>
+    <p class="section-subtitle">{t.location.subtitle}</p>
 
     <div class="location-grid">
       <div>
@@ -16,9 +25,9 @@ const { address, phone, email, mapsEmbed } = restaurant;
           <tbody>
             {hours.map((slot) => (
               <tr>
-                <td>{slot.days} — {slot.label}</td>
+                <td>{days[slot.days]} — {periods[slot.period]}</td>
                 <td>
-                  {slot.open ? `${slot.open} – ${slot.close}` : 'Fechado'}
+                  {slot.open ? `${slot.open} – ${slot.close}` : t.location.closed}
                 </td>
               </tr>
             ))}
@@ -27,22 +36,22 @@ const { address, phone, email, mapsEmbed } = restaurant;
 
         <div class="contact-info">
           <div>
-            <strong>Endereço:</strong><br />
+            <strong>{t.location.address}</strong><br />
             {address.street}, {address.neighborhood}<br />
             {address.city} – {address.state}, {address.zip}
           </div>
-          <div><strong>Telefone:</strong> {phone}</div>
-          <div><strong>E-mail:</strong> <a href={`mailto:${email}`}>{email}</a></div>
+          <div><strong>{t.location.phone}</strong> {phone}</div>
+          <div><strong>{t.location.email}</strong> <a href={`mailto:${email}`}>{email}</a></div>
         </div>
       </div>
 
       <div class="map-embed">
         <iframe
-          src={mapsEmbed}
+          src={mapSrc}
           loading="lazy"
           allowfullscreen
           referrerpolicy="no-referrer-when-downgrade"
-          title="Localização no Google Maps"
+          title={t.location.mapTitle}
         />
       </div>
     </div>

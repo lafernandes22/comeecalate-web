@@ -1,0 +1,56 @@
+---
+import Header from './Header.astro';
+import Menu from './Menu.astro';
+import About from './About.astro';
+import Gallery from './Gallery.astro';
+import Location from './Location.astro';
+import info from '../data/info.json';
+import { assetPath, getStrings, locales, pagePath, type Lang } from '../i18n';
+import '../styles/global.css';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = getStrings(lang);
+const { name } = info.restaurant;
+---
+
+<!doctype html>
+<html lang={t.meta.htmlLang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={`${name} — ${t.tagline}`} />
+    <title>{name}</title>
+    <link rel="icon" type="image/svg+xml" href={assetPath('/favicon.svg')} />
+    {locales.map((code) => (
+      <link rel="alternate" hreflang={getStrings(code).meta.htmlLang} href={pagePath(code)} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={pagePath('en')} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <Header lang={lang} />
+
+    <section id="hero" class="hero">
+      <div class="hero-bg" style={`background-image: url('${assetPath('/tiles.svg')}')`}></div>
+      <div class="hero-content">
+        <img src={assetPath('/logo.svg')} alt={name} class="hero-logo" />
+        <a href="#menu" class="btn">{t.hero.cta}</a>
+      </div>
+    </section>
+
+    <Menu lang={lang} />
+    <About lang={lang} />
+    <Gallery lang={lang} />
+    <Location lang={lang} />
+
+    <footer class="site-footer">
+      <p>© {new Date().getFullYear()} {name}. {t.footer.rights}</p>
+    </footer>
+  </body>
+</html>
